@@ -51,6 +51,13 @@ app.get("/about", (req, res) => {
     })
 });
 
+app.get("/projects", (req, res) => {
+    // res.send("about");
+    res.render('projects.hbs', {
+        pageTitle: "Projects page"
+    })
+});
+
 app.get("/bad", (req, res) => {
     res.send({error: "Unable to send message"})
 });
